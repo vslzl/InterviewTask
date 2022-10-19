@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{91EF9ECF-A20
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterviewTask.Api", "src\Api\InterviewTask.Api.csproj", "{6FA3EC95-79B1-4B84-A334-1D66A27C1A21}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterviewTask.Api.Tests", "src\Tests\InterviewTask.Api.Tests.csproj", "{F5AA1003-757C-4E31-9564-E22F17ED4BC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,8 +22,13 @@ Global
 		{6FA3EC95-79B1-4B84-A334-1D66A27C1A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FA3EC95-79B1-4B84-A334-1D66A27C1A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FA3EC95-79B1-4B84-A334-1D66A27C1A21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5AA1003-757C-4E31-9564-E22F17ED4BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5AA1003-757C-4E31-9564-E22F17ED4BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5AA1003-757C-4E31-9564-E22F17ED4BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5AA1003-757C-4E31-9564-E22F17ED4BC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6FA3EC95-79B1-4B84-A334-1D66A27C1A21} = {91EF9ECF-A20D-455B-A1B6-C43B98DA1D20}
+		{F5AA1003-757C-4E31-9564-E22F17ED4BC0} = {91EF9ECF-A20D-455B-A1B6-C43B98DA1D20}
 	EndGlobalSection
 EndGlobal
