@@ -1,0 +1,26 @@
+<form *ngIf="formGroup" [formGroup]="formGroup" (ngSubmit)="submitTodo()">
+    <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="Title" formControlName="title">
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Description</mat-label>
+        <textarea matInput placeholder="Description" formControlName="description"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Due Date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dueDate">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-checkbox style="margin-top:20px;" class="full-width" formControlName="isDone">
+        Done
+    </mat-checkbox>
+
+    <button mat-button style="margin-top:20px;" color="primary" [disabled]="!formGroup.valid">Submit</button>
+
+</form>
