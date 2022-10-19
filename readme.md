@@ -39,8 +39,8 @@ ng serve
 
 navigate to `http://localhost:4200`
 
-# Step 1
-Interview task requires ne simple task.
+# Development Step 1
+Interview task requires one simple task.
 ## Create solution
 
 ```
@@ -67,4 +67,11 @@ from ~/InterviewTask/src
 ng new Frontend
 ```
 
-develop a some SW...
+> used angular material for styling and templating.
+
+develop some SW...
+
+# Notes
+1. Docker's localhost can be challenging between platforms. I used macos to develop this sample so I use the `docker-compose.override.macos.yml`file when building and running image.
+1. To dynamically change angular apiUrl environment variable, I've added some tweaks to app which can be seen at `index.html` and `environment.ts` files (included script file at the end of the head tag)
+1. If you set `CreateMockData` to `Y` (the env variable) at relevant docker-compose.override file, database will be seeded with random todo data.
