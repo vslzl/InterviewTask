@@ -8,6 +8,7 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0-focal AS build
 WORKDIR /src
 
 COPY ["src/Api/InterviewTask.Api.csproj", "src/Api/"]
+COPY ["src/Tests/InterviewTask.Api.Tests.csproj", "src/Tests/"]
 COPY ["NuGet.config", "./"]
 COPY ["InterviewTask.sln", "./"]
 RUN dotnet restore "InterviewTask.sln"
