@@ -12,7 +12,8 @@ services:
   todos-api:
     environment:
       - ConnectionStrings__DefaultConnection=Server=host.docker.internal, 5433;Database=TodoDb;User Id=sa;Password=${DB_PASSWORD}
-      - CreateMockData=N
+      - CreateMockData=Y
+      - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "5101:80"
 

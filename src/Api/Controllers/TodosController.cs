@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace InterviewTask.Api.Controllers;
 
-[Route("api/[controller]")]
+[Route("[controller]")]
 public class TodosController : ControllerBase
 {
     private readonly ITodoService _todoService;
