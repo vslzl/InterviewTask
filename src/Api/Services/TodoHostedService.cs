@@ -21,7 +21,7 @@ public class TodoHostedService : IHostedService
     {
         try
         {
-            await CreateDatabaseAsync(cancellationToken);
+            // await CreateDatabaseAsync(cancellationToken);
             await SeedDatabaseAsync(cancellationToken);
         }
         catch (System.Exception exception)

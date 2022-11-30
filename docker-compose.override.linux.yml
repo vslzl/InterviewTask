@@ -2,23 +2,23 @@ version: '3.4'
 
 services:
 
-  sqldata:
-    environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=${DB_PASSWORD}
-    ports:
-      - "5433:1433" 
+  # sqldata:
+  #   environment:
+  #     - ACCEPT_EULA=Y
+  #     - SA_PASSWORD=${DB_PASSWORD}
+  #   ports:
+  #     - "5433:1433" 
 
   todos-api:
     environment:
       - ConnectionStrings__DefaultConnection=Server=docker.for.linux.localhost, 5433;Database=TodoDb;User Id=sa;Password=${DB_PASSWORD}
-      - CreateMockData=N
+      - CreateMockData=Y
     ports:
       - "5101:80"
 
   frontend-spa:
     environment:
-      - API_URL=http://localhost:5101
+      - API_URL=https://ec2-3-137-194-207.us-east-2.compute.amazonaws.com
     ports:
-      - "5100:80"
+      - "80:80"
 

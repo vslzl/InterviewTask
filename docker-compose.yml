@@ -2,16 +2,16 @@ version: '3.4'
 
 services:
 
-  sqldata:
-    image: mcr.microsoft.com/mssql/server:2019-latest
+  # sqldata:
+  #   image: mcr.microsoft.com/mssql/server:2019-latest
 
   todos-api:
     image: ${REGISTRY:-dockerize-containers}/todos-api:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Api/Dockerfile
-    depends_on:
-      - sqldata
+    # depends_on:
+    #   - sqldata
 
   frontend-spa:
     image: ${REGISTRY:-dockerize-containers}/frontend-spa:${TAG:-latest}
