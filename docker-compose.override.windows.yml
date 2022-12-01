@@ -2,12 +2,12 @@ version: '3.4'
 
 services:
 
-  sqldata:
-    environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=${DB_PASSWORD}
-    ports:
-      - "5433:1433" 
+  # sqldata:
+  #   environment:
+  #     - ACCEPT_EULA=Y
+  #     - SA_PASSWORD=${DB_PASSWORD}
+  #   ports:
+  #     - "5433:1433" 
 
   todos-api:
     environment:
@@ -21,5 +21,5 @@ services:
     environment:
       - API_URL=http://localhost:5101
     ports:
-      - "5100:80"
+      - "80:80"
 
