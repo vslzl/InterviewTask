@@ -68,7 +68,7 @@ public class TodoHostedService : IHostedService
         var context = scope.ServiceProvider.GetRequiredService<TodoDbContext>();
         if (!context.Todos.Any() && _configuration["CreateMockData"]=="Y")
         {
-            var count = _random.Next(1000);
+            var count = _random.Next(100);
             _logger.LogInformation("{Count} Todo's will be added to inmemory database", count);
             var todos = Enumerable.Range(1, count).Select(p => new Todo
             {
